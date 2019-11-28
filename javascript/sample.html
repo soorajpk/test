@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            var obj={"name":"sooraj pk "}
+            function greetings(dt,msg){
+                return "greetings from "+this.name+"date and time "+dt+"\n"+msg}
+                console.log(greetings.call(obj,new Date(),"good evening"))
+                console.log(greetings.apply(obj,[new Date(),"good evening"]))
+                var bound=greetings.bind(obj,[new Date(),"good evening"])
+                console.log(bound)
+                console.log(bound())
+
+                // function inputs(a,b,c){
+                //     return function add(){
+                //         console.log(a+b+c)
+                //     }
+                // }
+                // test=inputs(10,20,30)
+                // console.log(test)
+                //console.log(test())
+                // test()
+                    // (function test(){
+                    //     console.log("self working")
+
+                    // })();
+                    (function sample(){
+                        console.log("hello")
+                    })()
+                </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+<body>
+    <script>
+        function search(){
+            var content=document.getElementById('content').value
+            //alert(content)
+            var word=document.getElementById('search').value
+            var exp=new RegExp(word,'g')
+            //var words=content.match(exp)
+            //alert(words+"length:"+words.length)
+            newcontent=content.replace(exp,"<span style='color:red'>"+word+"</span>")
+            //replace any value by putting anything in the second parameter of the replace function
+            document.getElementById('paral').innerHTML=newcontent
+                    }
+    </script>
+    <textarea name="" id="content" cols="30" rows="10">
+
+    </textarea>
+    <input type="text" id="search">
+    <p id='paral'></p>
+    <button onclick="search()">click</button>
+</body>    
+</html>

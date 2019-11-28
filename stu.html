@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+               var student={}
+               console.log(student)
+               student.rollno=12
+               student.age=22
+               student.name="sooraj"
+               student1={
+                   rollno:12,age:22,name:"sooraj",
+                   average:function(m1,m2,m3){
+                       return(m1+m2+m3)/3
+                   }
+               }
+               console.log("after adding properties", student1)
+               console.log(student1.hasOwnProperty('rollno'))
+               var result=student1.average(10,20,30)
+               console.log("average=",result)
+            </script>
+     
+    </body>
+</html>

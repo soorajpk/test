@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        function greet(gender, age, name) {
+            var salutation = gender === "male" ? "Mr. " : "Ms. ";
+            if (age > 25) {
+                return "Hello, " + salutation + name + ".";
+            } else {
+                return "Hey, " + name + ".";
+            }
+        }
+        var obj={}
+        //greet.apply(obj,["male","abin",12])
+        var greetAnAdultMale=greet.bind(null,"male",30)
+        console.log(greetAnAdultMale("Abin"))
+        console.log(greetAnAdultMale("Abin"))
+        var greetYoungFemale=greet.bind(null,"female",18)
+        console.log(greetYoungFemale("Rose"))
+    </script>
+</body>
+
+</html>

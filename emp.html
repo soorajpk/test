@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function SetEmployee(){
+                employee={}
+                var eid=document.getElementById('eid').value
+                var name=document.getElementById('name').value
+                var salary=document.getElementById('salary').value
+                employee.empid=eid
+                employee.Name=name
+                employee.salary=salary
+                employee.display=function(){alert("Eid="+employee.empid+"\n"+"name="+employee.Name+"\n"+"salary="+employee.salary)
+            }
+            employee.display()
+                
+            }
+            // var employee={}
+            // console.log(employee)
+            // employee={
+            //     id:42,name:"sooraj",salary:600000
+            // }employee.
+            // console.log("after adding properties",employee)
+            // console.log(employee.hasOwnProperty('id'))
+
+            
+            </script>
+            <form action="" onsubmit="SetEmployee()">
+                <div>
+                <label for="">Employee id:</label>
+                
+                    <input type="text" id="eid" required>
+                </div><br>
+                <div>
+                    <label for="">Name:</label>
+                    <input type="text" id="name" required>
+                </div><br>
+                <div>
+                    <label for="">Salary:</label>
+                    <input type="text" id="salary" required>
+                </div><br>
+                <input type="submit" value="save">
+            </form>
+            
+    </body>
+</html>

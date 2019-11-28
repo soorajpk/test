@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+crossorigin="anonymous">
+</head>
+
+<body>
+<style>
+.abc {
+border: 1px solid;
+width: 157px;
+text-align: center;
+height: 100px;
+box-shadow: 0px 8px 7px 4px;
+margin-bottom: 20px;
+
+}
+
+.def {
+border: 1px solid;
+width: 157px;
+text-align: center;
+height: 100px;
+box-shadow: 0px 8px 7px 4px;
+margin-bottom: 20px;
+
+}
+
+.red {
+background-color: red;
+margin-bottom: 20px;
+}
+.bulk{
+padding: .25rem 3.5rem !important;
+margin-bottom: 20px !important;
+}
+</style>
+
+
+<div class="row">
+<div class="col-sm-2">
+</div>
+
+
+<div class="col-sm-4">
+<br>
+<label>Name</label>
+<input type="text" id="name" class="form-control">
+<br>
+<label>Age</label>
+<input type="text" id="age" class="form-control">
+<br>
+<label>DOB</label>
+<input type="date" id="dob" class="form-control">
+<br>
+<button onclick="display()" class="btn btn-primary btn-sm bulk">save</button>
+
+</div>
+<div class="col-sm-2" id="print">
+<br><br>
+</div>
+<div class="col-sm-2" id="mov">
+<br><br>
+</div>
+
+</div>
+
+<script>
+function student(name, age, dob) {
+this.name = name
+this.age = age
+this.dob = dob
+
+}
+function display() {
+var name = document.getElementById('name').value
+var age = document.getElementById('age').value
+var dob = document.getElementById('dob').value
+
+var obj = new student(name, age, dob)
+
+var node = document.createElement('div')
+node.setAttribute("class", "abc")
+
+var node1 = document.createElement('input')
+node1.setAttribute("type", "button")
+node1.setAttribute("value", "move")
+node1.setAttribute("class", "btn btn-primary btn-sm bulk")
+node1.onclick = function () {
+var node2 = document.createElement('div')
+node2.setAttribute("class", "def")
+
+
+
+
+var redis = document.createTextNode(obj.name)
+var redis1 = document.createTextNode(obj.age)
+var redis2 = document.createTextNode(obj.dob)
+
+
+var show3 = document.createTextNode("Name:")
+var show4 = document.createTextNode("Age:")
+
+var show5 = document.createTextNode("DOB:")
+
+node2.appendChild(show3)
+node2.appendChild(redis)
+node2.appendChild(document.createElement("br"))
+node2.appendChild(show4)
+node2.appendChild(redis1)
+node2.appendChild(document.createElement("br"))
+node2.appendChild(show5)
+node2.appendChild(redis2)
+
+var node3 = document.createElement('input')
+node3.setAttribute("type", "button")
+node3.setAttribute("value", "delete")
+node3.setAttribute("class", "btn btn-primary btn-sm red bulk")
+
+
+document.getElementById('mov').appendChild(node2)
+document.getElementById('mov').appendChild(node3)
+}
+
+var show = document.createTextNode("Name:")
+var show1 = document.createTextNode("Age:")
+var show2 = document.createTextNode("DOB:")
+
+var textnode = document.createTextNode(obj.name)
+
+var textnode1 = document.createTextNode(obj.age)
+
+var textnode2 = document.createTextNode(obj.dob)
+
+
+node.appendChild(show)
+node.appendChild(textnode)
+node.appendChild(document.createElement("br"))
+node.appendChild(show1)
+node.appendChild(textnode1)
+node.appendChild(document.createElement("br"))
+node.appendChild(show2)
+node.appendChild(textnode2)
+node.appendChild(node1)
+
+document.getElementById('print').appendChild(node)
+document.getElementById('print').appendChild(node1)
+
+
+
+
+}
+
+</script>
+
+
+</body>
+
+</html> 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <!-- <script src="js/script.js"></script> -->
+       <script src="todo.js"></script>
+        
+                <!-- for character set defition     -->
+                <meta charset="utf-16">
+                <!-- for device based display definition     -->
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!-- to access bootstrap     -->
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+                 <style>
+                        /* style class */
+              .demostyleclass{
+                     font-weight: 800;
+                     color:black;
+              
+                     }
+                 </style>
+        </head>
+
+      <body>
+            
+        
+                <div class="row">
+                        <div class="col-sm-6 demostyleclass" id="todolist">TO DO LIST
+                               <br>
+                                <label for=""> Task</label>
+                                <input type="text" name="task" id ="task">
+                                
+                                <button onclick= "addtask()"> Add Task </button>
+                                
+                                <br>
+                                
+
+                        </div>
+                        <div class="col-sm-6 demostyleclass" id="tmrwlist">TO DO LIST FOR TOMORROW
+                            <br>
+                            <button onclick= "movetask()"> Move Task </button>
+                            <br>
+                     
+
+                        </div>
+                        
+                        
+                        
+                      </div>
+                
+     </body> 
+</html>

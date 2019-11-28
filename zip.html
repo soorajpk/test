@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+             function showdate(){
+            var date=new Date()
+            alert(date)
+            var d=date.getDate()
+            console.log(d)
+            var y=date.getFullYear()
+            console.log(y)
+            document.getElementById('date').value=d
+
+        }
+            function check(){
+                var zipcode=document.getElementById("zip").value
+                RegExp=/^\d{5}[-]\d{4}$/
+                if(RegExp.test(zipcode))
+                {
+                    return true
+                }
+                else{
+                    return false
+                }
+    
+
+            }
+        </script>
+        <input type="text" name="" id="date">
+        <button onclick="showdate()">click</button>
+       
+        <input type="text" name="" id="zip">
+        <button onclick="check()">Click</button>
+    </body>
+</html>

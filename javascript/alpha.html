@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var arr = ["a", "b", 12, 23, "car"]
+        //every function is applied for all elements of an array
+        //if one of the elements are false then it shows false
+        result = arr.every((x) => {
+            console.log(x)
+            // console.log("called...")
+            var regex = /[a-zA-Z]+/g
+            return regex.test(x)
+        })
+        console.log(result)
+        var str = "hi hello world"
+        words = str.split(" ")
+        words.forEach(element => {
+            console.log(element)
+        });
+        // function WordCount(str) {
+        //     return str.split(" ").length;
+        // }
+        // console.log(WordCount("hello world"));
+        var stmt = "java script is interpreted java script is object oriented"
+        word = stmt.split(" ")
+        var obj = {}
+        word.forEach(x => {
+            if (obj[x]) {
+                obj[x = 1]
+            }
+            else {
+                obj[x] = obj[x] + 1
+            }
+            console.log(x)
+        });
+        //console.log(word)
+
+        try {
+            sum = k + 1
+        }
+        catch (e) {
+            console.log("exception caught")
+            //console.log(e)
+            console.log(e.name)
+            console.log(e.message)
+        }
+
+        finally {
+            console.log("finally block")
+        }
+        console.log("After exception")
+        function check(input) {
+            if (isNaN(input)) {
+                throw new Error("invalid input")
+            }
+        }
+        try{
+        check()
+        }catch(e){
+            console.log(e.message)
+        }
+        var input=prompt("enter a number") 
+        alert(input)
+        var result=confirm("do you wish"+ " to continue?")
+        alert(result)
+
+
+    </script>
+</body>
+
+</html>
